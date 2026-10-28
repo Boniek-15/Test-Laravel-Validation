@@ -13,6 +13,12 @@
     Description:
     <br />
     <input type="text" name="description" />
-    <br /><br />
+    <br />
+    <ul>
+        @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+        @endforeach
+    </ul>
+    <br />
     <button type="submit">Save</button>
 </form>
